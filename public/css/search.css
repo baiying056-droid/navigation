@@ -1,0 +1,55 @@
+/* 外层容器：让搜索框居中 */
+
+.search-wrapper {
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* 搜索框毛玻璃效果 */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 60px;
+
+    background: rgba(255, 255, 255, 0.25);
+    /* 半透明 */
+    backdrop-filter: blur(10px);
+    /* 毛玻璃核心 */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari 支持 */
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    width: 40%;
+}
+
+/* 输入框样式 */
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #272727;
+    padding-left: 10px;
+    font-weight: 700;s
+}
+
+/* 按钮样式 */
+.search-box button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-box button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}

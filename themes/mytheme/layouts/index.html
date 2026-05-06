@@ -1,0 +1,52 @@
+{{- $indexStyle := resources.Get "css/index.css" -}}
+{{- $headerStyle := resources.Get "css/header.css" -}}
+{{- $searchStyle := resources.Get "css/search.css" -}}
+{{- $headerScript := resources.Get "js/header.js" -}}
+{{- $urlboxStyle := resources.Get "css/urlbox.css" -}}
+{{- $urlboxScript := resources.Get "js/urlbox.js" -}}
+{{- $cookiesScript := resources.Get "js/cookie.js" -}}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="{{ .Site.Params.coding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Site.Params.description | default .Summary }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ $headerStyle.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $indexStyle.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $urlboxStyle.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $searchStyle.RelPermalink }}">
+</head>
+<body>
+    <!-- 导航栏 -->
+    {{ if .Site.Params.enableHeader }}
+        {{- partial "header.html" . -}}
+    {{ end }}
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+
+        {{ partial "search.html" . }}
+        
+        <div class="hero-content">
+
+            {{ partial "urlbox.html" . }}
+
+        </div>
+
+    </section>
+
+    <!-- 内容区域 -->
+    {{- partial "about.html" . -}}
+
+    <!-- 页脚 -->
+    {{- partial "footer.html" . -}}
+
+    <!-- 导航栏脚本 -->
+    <script src="{{ $headerScript.RelPermalink }}"></script>
+    <!-- URL盒子脚本 -->
+    <script src="{{ $urlboxScript.RelPermalink }}"></script>
+    <script src="{{ $cookiesScript.RelPermalink }}"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta name="generator" content="Hugo 0.160.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>My Site</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/urlbox.css">
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+    
+    <header class="header">
+    <div class="header-container">
+        
+        <div class="header-logo">
+            <img src="logo.png" alt="Logo" class="logo-image">
+            <a href="/" class="logo-link">My Site</a>
+        </div>
+
+        
+        <nav class="header-nav">
+            
+            <div class="nav-group">
+                
+                    <a href="/" class="nav-one">
+                        导航1
+                    </a>
+                  
+            </div>
+
+            
+            <div class="nav-group">
+                <div class="nav-inline-menu">
+                    
+                    <a href="/" class="inline-item">导航1</a>
+                    
+                    <a href="/" class="inline-item">导航2</a>
+                    
+                    <a href="/" class="inline-item">导航3</a>
+                    
+                </div>  
+            </div>
+
+            
+            <div class="nav-group dropdown">
+                <a href="javascript:void(0)" class="nav-title dropdown-toggle">
+                    资源中心
+                </a>
+                <div class="dropdown-menu">
+                    
+                    <a href="/blog/" class="dropdown-item">博客</a>
+                    
+                    <a href="/documentation/" class="dropdown-item">文档</a>
+                    
+                    <a href="/faq/" class="dropdown-item">常见问题</a>
+                    
+                </div>
+            </div>
+        </nav>
+
+        
+        <div class="header-account">
+            
+
+<div class="account-container" id="accountContainer">
+    <div class="account-form">
+        <div id="formClosebtn">&times;</div>
+        <h2>登录</h2>
+
+        
+        <div id="registerForm" class="register-form">
+            <div class="input-box">
+                <label for="regUserName">用户名：</label>
+                <input id="regUserName" placeholder="用户名">
+            </div>
+            <div class="input-box">
+                <label for="regUserPass">密码：</label>
+                <input id="regUserPass" type="password" placeholder="密码">
+            </div>
+            <div class="input-box">
+                <label for="regUserPass">确认密码：</label>
+                <input id="regUserPass" type="password" placeholder="密码">
+            </div>
+        
+            <div id="registerformBtn">确认</div>
+        
+        </div>
+        
+        
+        <div id="loginForm" class="login-form" style="display: none;">
+            <div class="input-box">
+                <label for="loginUserName">用户名：</label>
+                <input id="loginUserName" placeholder="用户名">
+            </div>
+            <div class="input-box">
+                <label for="loginUserPass">密码：</label>
+                <input id="loginUserPass" type="password" placeholder="密码">
+            </div>
+            <div id="loginformBtn">确认</div>
+        </div>
+        
+        <div>
+            <button>已有账号登录</button> <button>注册账号</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+            <button id="registerBtn" style="padding: 5px;"> 注册/登录</button>
+        </div>
+
+        
+        <div class="header-toggle">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>
+
+
+    
+    <section class="hero">
+
+        
+<div class="search-wrapper">
+    <form action="https://www.bing.com" method="get" class="search-box">
+        <input type="text" name="q" placeholder="搜索内容…" />
+        <button type="submit">搜索</button>
+    </form>
+</div>
+        
+        <div class="hero-content">
+
+            <div class="url-container">
+    
+    <div class="tag-container">
+        <h2>收藏夹1</h2>
+        <div class="tag-list" id="tagList">
+            <a href="#">标签1</a>
+            <a href="#">标签2</a>
+        </div>
+
+        <div class="add-container" id="addContainer">
+            
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3 style="color: black;">新增url</h3>
+        <div class="input-group">
+            <label for="inputBox">请输入url内容：</label>
+            <input type="text" id="inputBox" placeholder="请输入内容..." />
+        </div>
+
+        <div class="input-group">
+            <label for="inputBox">请输入url内容：</label>
+            <input type="text" id="inputBox" placeholder="请输入内容..." />
+        </div>
+
+        <div class="input-group">
+            <label for="inputBox">请输入url内容：</label>
+            <input type="text" id="inputBox" placeholder="请输入内容..." />
+        </div>
+
+        <div class="input-group">
+            <label for="inputBox">请输入url内容：</label>
+            <input type="text" id="inputBox" placeholder="请输入内容..." />
+        </div>
+
+        <div class="input-group">
+            <label for="inputBox">请输入url内容：</label>
+            <input type="text" id="inputBox" placeholder="请输入内容..." />
+        </div>
+        
+
+        <div class="actions">
+            <button id="cancelBtn">取消</button>
+            <button id="confirmBtn">确定</button>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="add-btn" id="addBtn">➕ 添加</div>
+        <div class="    toggle-btn" id="toggleBtn">▼</div>
+    </div>
+
+    <div class="tag-container">
+        <h2>urlname</h2>
+        <div class="tag-list" id="tagList">
+            <a href="#">标签1</a>
+            <a href="#">标签2</a>
+            <a href="#">标签3</a>
+            <a href="#">标签4</a>
+            <a href="#">标签5</a>
+            <a href="#">标签6</a>
+            <a href="#">标签7</a>
+            <a href="#">标签8</a>
+            <a href="#">标签9</a>
+            <a href="#">标签10</a>
+            <a href="#">标签11</a>
+            <a href="#">标签1</a>
+            <a href="#">标签2</a>
+            <a href="#">标签3</a>
+            <a href="#">标签4</a>
+            <a href="#">标签5</a>
+            <a href="#">标签6</a>
+            <a href="#">标签7</a>
+            <a href="#">标签8</a>
+            <a href="#">标签9</a>
+            <a href="#">标签10</a>
+            <a href="#">标签11</a>
+        </div>
+        <div class="add-btn" id="addBtn">＋</div>
+        <div class="toggle-btn" id="toggleBtn">▼</div>
+    </div>
+
+    <div class="tag-container">
+        <h2>urlname</h2>
+        <div class="tag-list" id="tagList">
+            <a href="#">标签1</a>
+            <a href="#">标签2</a>
+            <a href="#">标签3</a>
+            <a href="#">标签4</a>
+            <a href="#">标签5</a>
+            <a href="#">标签6</a>
+            <a href="#">标签7</a>
+            <a href="#">标签8</a>
+            <a href="#">标签9</a>
+            <a href="#">标签10</a>
+            <a href="#">标签11</a>
+            <a href="#">标签1</a>
+            <a href="#">标签2</a>
+            <a href="#">标签3</a>
+            <a href="#">标签4</a>
+            <a href="#">标签5</a>
+            <a href="#">标签6</a>
+            <a href="#">标签7</a>
+            <a href="#">标签8</a>
+            <a href="#">标签9</a>
+            <a href="#">标签10</a>
+            <a href="#">标签11</a>
+        </div>
+    
+        <div class="toggle-btn" id="toggleBtn">▼</div>
+    </div>
+
+    
+</div>
+
+
+
+        </div>
+
+    </section>
+
+    
+<section id="about" class="content-section">
+    <h2>关于我们</h2>
+    <p>这是一个使用Hugo构建的现代化网站，采用毛玻璃设计风格和渐变背景，提供优秀的用户体验。</p>
+
+    
+    <div class="grid">
+        
+        <div class="card">
+            <h3>响应式设计</h3>
+            <p>完美适配各种设备和屏幕尺寸,有问题</p>
+        </div>
+        
+        <div class="card">
+            <h3>现代风格</h3>
+            <p>采用毛玻璃效果和渐变背景，ok</p>
+        </div>
+        
+        <div class="card">
+            <h3>高性能</h3>
+            <p>快速加载和优化的网站性能，ok</p>
+        </div>
+        
+    </div>
+    
+</section>
+
+
+<footer>
+    <p>&copy; 2026 My Site. 保留所有权利。</p>
+</footer>
+    <script src="/js/header.js"></script>
+    
+    <script src="/js/urlbox.js"></script>
+    <script src="/js/cookie.js"></script>
+</body>
+</html>

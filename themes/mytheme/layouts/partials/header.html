@@ -1,0 +1,58 @@
+<header class="header">
+    <div class="header-container">
+        <!-- 网站Logo -->
+        <div class="header-logo">
+            <img src="{{ .Site.Params.logourl }}" alt="Logo" class="logo-image">
+            <a href="/" class="logo-link">{{ .Site.Title }}</a>
+        </div>
+
+        <!-- 导航栏 -->
+        <nav class="header-nav">
+            <!-- 第一个子导航 -->
+            <div class="nav-group">
+                {{ range .Site.Menus.one }}
+                    <a href="{{ .URL }}" class="nav-one">
+                        {{ .Name }}
+                    </a>
+                {{ end }}  
+            </div>
+
+            <!-- 第二个子导航 -->
+            <div class="nav-group">
+                <div class="nav-inline-menu">
+                    {{ range .Site.Menus.two }}
+                    <a href="{{ .URL }}" class="inline-item">{{ .Name }}</a>
+                    {{ end }}
+                </div>  
+            </div>
+
+            <!-- 第三个子导航 -->
+            <div class="nav-group dropdown">
+                <a href="javascript:void(0)" class="nav-title dropdown-toggle">
+                    资源中心
+                </a>
+                <div class="dropdown-menu">
+                    {{ range .Site.Menus.resources }}
+                    <a href="{{ .URL }}" class="dropdown-item">{{ .Name }}</a>
+                    {{ end }}
+                </div>
+            </div>
+        </nav>
+
+        <!-- 注册/登录 -->
+        <div class="header-account">
+            {{ partial "register.html" . }}
+            <button id="registerBtn" style="padding: 5px;"> 注册/登录</button>
+        </div>
+
+        <!-- 菜单开关（移动版） -->
+        <div class="header-toggle">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,70 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'My Site'
+theme = 'mytheme' #使用模版一定要设置。否则在主结构下没有相关文件会出问题
+
+
+[params]
+coding = 'utf-8'
+aboutTitle = '关于我们'
+aboutContent = '这是一个使用Hugo构建的现代化网站，采用毛玻璃设计风格和渐变背景，提供优秀的用户体验。'
+ctaText = '开始探索....'
+ctaLink = '#about'
+description = ''
+logourl = 'logo.png'
+enableHeader = 'true'
+
+# 导航
+[[menu.one]]
+name = '导航1'
+url = '/'
+weight = 1
+
+
+[[menu.two]]
+name = '导航1'
+url = '/'
+weight = 1
+
+[[menu.two]]
+name = '导航2'
+url = '/'
+weight = 2
+
+[[menu.two]]
+name = '导航3'
+url = '/'
+weight = 3
+
+# 资源中心子菜单
+[[menu.resources]]
+name = '博客'
+url = '/blog/'
+weight = 1
+
+[[menu.resources]]
+name = '文档'
+url = '/documentation/'
+weight = 2
+
+[[menu.resources]]
+name = '常见问题'
+url = '/faq/'
+weight = 3
+
+
+# 功能特性卡片
+[[params.features]]
+title = '响应式设计'
+description = '完美适配各种设备和屏幕尺寸,有问题'
+
+[[params.features]]
+title = '现代风格'
+description = '采用毛玻璃效果和渐变背景，ok'
+
+[[params.features]]
+title = '高性能'
+description = '快速加载和优化的网站性能，ok'
+
+
+

@@ -1,0 +1,21 @@
+{{- $style := resources.Get "css/404.css" -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="{{ .Site.Params.coding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 - 页面未找到</title>
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="error-title">页面未找到</div>
+        <div class="error-message">抱歉，您访问的页面不存在或已被删除。</div>
+        <div>
+            <a href="/" class="back-link">返回首页</a>
+            <a href="javascript:history.back()" class="back-link home-link">返回上一页</a>
+        </div>
+    </div>
+</body>
+</html>

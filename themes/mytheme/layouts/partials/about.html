@@ -1,0 +1,17 @@
+{{ if .Site.Params.aboutTitle }}
+<section id="about" class="content-section">
+    <h2>{{ .Site.Params.aboutTitle }}</h2>
+    <p>{{ .Site.Params.aboutContent }}</p>
+
+    {{ if .Site.Params.features }}
+    <div class="grid">
+        {{ range .Site.Params.features }}
+        <div class="card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}

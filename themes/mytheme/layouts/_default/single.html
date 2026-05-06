@@ -1,0 +1,37 @@
+{{- $indexStyle := resources.Get "css/index.css" -}}
+{{- $headerStyle := resources.Get "css/header.css" -}}
+{{- $headerScript := resources.Get "js/header.js" -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="{{ .Site.Params.coding }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Summary }}">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ $headerStyle.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $indexStyle.RelPermalink }}">
+</head>
+<body>
+    <!-- 导航栏 -->
+    {{- partial "header.html" . -}}
+
+    <!-- 内容区域 -->
+    <section class="content-section" style="margin-top: 40px;">
+        <h2>{{ .Title }}</h2>
+        <div style="font-size: 14px; color: #999; margin-bottom: 20px;">
+            发布于: {{ .PublishDate.Format "2006-01-02" }}
+        </div>
+        <div>
+            {{ .Content }}
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}. 保留所有权利。</p>
+    </footer>
+
+    <!-- 导航栏脚本 -->
+    <script src="{{ $headerScript.RelPermalink }}"></script>
+</body>
+</html>
